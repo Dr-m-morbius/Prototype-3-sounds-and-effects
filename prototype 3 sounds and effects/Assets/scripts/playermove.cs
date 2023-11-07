@@ -23,10 +23,11 @@ public class playermove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && IsOnGround) 
+        if (Input.GetKeyDown(KeyCode.Space) && IsOnGround && !gameover) 
         {
             _playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
             IsOnGround = false;
+            _playeranim.SetTrigger("Jump_trig");
            
         }
 
@@ -42,6 +43,8 @@ public class playermove : MonoBehaviour
         {
             gameover = true;
             Debug.Log("game over");
+            _playeranim.SetBool("Death_b", true);
+            _playeranim.SetInteger("DeathType_int", 1);
         }
     }
 }

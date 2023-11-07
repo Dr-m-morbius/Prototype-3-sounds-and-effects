@@ -279,8 +279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88cba3f794070d947b45cb4637f84c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 10
-  Gravity: 1
+  JumpForce: 40
+  Gravity: 10
   gameover: 0
   IsOnGround: 1
 --- !u!54 &440395872
@@ -297,7 +297,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!65 &440395873
 BoxCollider:
@@ -310,8 +310,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.8268707, z: 1}
-  m_Center: {x: 0, y: 1.5196985, z: 0}
+  m_Size: {x: 3.3664515, y: 2.981872, z: 1}
+  m_Center: {x: -0.029078364, y: 1.4421978, z: 0}
 --- !u!111 &440395874
 Animation:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 4, z: -15}
+  m_LocalPosition: {x: 8, y: 5.82, z: -18.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 835818922}
   - component: {fileID: 835818923}
   - component: {fileID: 835818924}
+  - component: {fileID: 835818925}
   m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
@@ -530,9 +531,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835818919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47c8d51acbd2c534b86e5abb1ce64308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &835818925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835818919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95afd7c39b9e604bae648495eecf840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1000056695
@@ -552,31 +565,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.26
+      value: 4.080002
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.94
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.81612396
+      value: -0.816122
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710653
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.70710707
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -584,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: fe32ce89f99911a478ea9e6736294382, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -622,7 +635,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 0, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2014335013
 MeshRenderer:
