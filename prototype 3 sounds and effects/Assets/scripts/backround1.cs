@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class backround : MonoBehaviour
+public class backround1 : MonoBehaviour
 {
     private Vector3 startpos;
     private float repeatWidth;
@@ -16,10 +16,8 @@ public class backround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < startpos.x - repeatWidth)
-        {
+        if (transform.position.x < startpos.x - 50) {
             transform.position = startpos;
-         }
+                }
     }
 }
-

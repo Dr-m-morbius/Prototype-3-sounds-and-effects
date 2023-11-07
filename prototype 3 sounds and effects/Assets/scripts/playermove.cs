@@ -6,6 +6,7 @@ public class playermove : MonoBehaviour
 {
     public float JumpForce = 10f;
     public float Gravity = 1f;
+    public bool gameover = false;
     public bool IsOnGround = true;
     private Rigidbody _playerRb;
     private Animator _playeranim;
@@ -26,12 +27,21 @@ public class playermove : MonoBehaviour
         {
             _playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
             IsOnGround = false;
-            _playeranim
+           
         }
 
     }
     private void OnCollisionEnter(Collision collision)
     {
-        IsOnGround = true;
+        
+
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            IsOnGround = true;
+        } else if (collision.gameObject.CompareTag("obsticle"))
+        {
+            gameover = true;
+            Debug.Log("game over");
+        }
     }
 }
